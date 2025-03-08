@@ -1,13 +1,20 @@
 <template>
   <div class="posts-page">
     <h1>Posts</h1>
+    <p>{{ posts }}</p>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 
 export default {
-
+  computed: {
+    ...mapState(['posts'])
+  },
+  async created() {
+    await this.$store.dispatch('fetchPosts')
+  }
 }
 </script>
 
