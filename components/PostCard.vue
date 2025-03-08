@@ -1,11 +1,11 @@
 <template>
-  <div class="post-card">
+  <nuxt-link :to="`/posts/${post.id}`" class="post-card">
     <div class="card-content">
       <p class="pid">Post ID : {{ post.id }}</p>
       <h2>Post Title : {{ post.title }}</h2>
       <p>Post Details : {{ post.body.substring(0, 100) }}...</p>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -13,10 +13,10 @@ export default {
   props: {
     post: {
       type: Object,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -25,6 +25,9 @@ export default {
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
   transition: box-shadow 0.3s ease;
 
   &:hover {
