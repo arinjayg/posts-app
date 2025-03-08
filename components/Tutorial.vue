@@ -10,7 +10,7 @@
         <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
           <h2 class="text-2xl leading-7 font-semibold">
             <button>
-              Click to view Post Page
+              Click to view Posts Page
             </button>
           </h2>
         </div>
